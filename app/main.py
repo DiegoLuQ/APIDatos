@@ -12,7 +12,9 @@ def start_app():
     app = FastAPI(docs_url="/diegoapi")
     origins = [
     "http://127.0.0.1:5173", 
-    "https://api.diego-luque.com/"
+    "https://api.diego-luque.com/",
+    "https://www.diego-luque.com/",
+    "https://diego-luque.com/"
     ]
     app.add_middleware(
     CORSMiddleware,
