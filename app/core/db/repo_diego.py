@@ -8,8 +8,8 @@ def create_datos(model:dict) -> dict:
     return retrive
 
 
-def retrieve_dato(id:str) -> dict:
-    dato = datos_diego.find_one({"_id": id})
+def retrieve_dato(name:str) -> dict:
+    dato = datos_diego.find_one({'datos.name': name})
     return dato
 
 def edit_dato(id:str, model:DatosUpdate):

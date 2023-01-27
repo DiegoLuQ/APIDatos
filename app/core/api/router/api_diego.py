@@ -8,8 +8,8 @@ router = APIRouter()
 
 
 @router.get('/datos')
-def get_dato(id:str) -> DatosCompletos:
-    dato = retrieve_dato(id)
+def get_dato() -> DatosCompletos:
+    dato = retrieve_dato(name="Diego Luque Linares")
     return dato
 
 @router.post('/')
