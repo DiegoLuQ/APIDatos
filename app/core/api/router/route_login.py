@@ -20,10 +20,6 @@ class Token(BaseModel):
     token_type: str
 
 
-class TokenData(BaseModel):
-    username: str | None = None
-
-
 def authenticate_user(username: str, password: str):
     user = get_user(username)
     pass_hash = user['password']
