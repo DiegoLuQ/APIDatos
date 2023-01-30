@@ -3,20 +3,29 @@ services:
   backend:
     build:
       context: .
-    command: uvicorn main:app --reload --proxy-headers --host 0.0.0.0 --port 80
-    # ports:
-    #   - 8000:80
+    command: uvicorn main:app --reload --proxy-headers --host 0.0.0.0 --port 81
+    expose:
+      - 81
     volumes:
       - ./app:/api/
     environment:
       - RUTA_MONGO=mongodb://db_mongo:27017/
+
+  nginx:
+    image: nginx:latest
+    # ports:
+    #   - "80:80"
+    environment:
       - VIRTUAL_PORT=80
       - VIRTUAL_HOST=api.diego-luque.com
       - LETSENCRYPT_HOST=api.diego-luque.com
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
 
 # algun network ya creado / any network create already
 networks:
   default:
-    name: network_name
+    name: web_private_red_webapps
+    # name: database_catalogo-network
     external: true
 

@@ -1,4 +1,4 @@
-FROM nginx/unit:1.26.0-python3.9
+FROM python:3.9-slim-buster
 
 WORKDIR /api
 
