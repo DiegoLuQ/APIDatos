@@ -1,6 +1,5 @@
 from core.schemas.schemas_diego import DatosCompletos, Datos, DatosUpdate
 from core.config.db import datos_diego
-from bson.objectid import ObjectId
 
 def create_datos(model:dict) -> dict:
     datos = datos_diego.insert_one(model)

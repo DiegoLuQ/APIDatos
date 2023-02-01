@@ -43,7 +43,7 @@ class Projects(BaseModel):
     description: str = None
     level: str = None
     type_back_front: str = None
-
+    repository: str = None
 
 class RedesSociales(BaseModel):
     github: str = None
@@ -186,7 +186,8 @@ class Datos(BaseModel):
                     "categories": ["react", "tailwindcss", "fastapi"],
                     "description": "orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500",
                     "level":"normal",
-                    "type_back_front":"frontend"},
+                    "type_back_front":"frontend",
+                    "repository": "www.github.com"},
                     {
                     "subdomain": "pro-crud2",
                     "url": "pro-crud2.diego-luque.com",
@@ -195,7 +196,8 @@ class Datos(BaseModel):
                     "categories": ["mongodb", "react", "fastapi"],
                     "description": "orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500",
                     "level":"normal",
-                    "type_back_front":"full-stack"},
+                    "type_back_front":"full-stack",
+                    "repository": "www.github.com"},
                     {
                     "subdomain": "pro-crud3",
                     "url": "pro-crud3.diego-luque.com",
@@ -204,7 +206,8 @@ class Datos(BaseModel):
                     "categories": ["mongodb", "python", "fastapi"],
                     "description": "orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500",
                     "level":"normal",
-                    "type_back_front":"backend"},
+                    "type_back_front":"backend",
+                    "repository": "www.github.com"},
                     {
                     "subdomain": "pro-crud4",
                     "url": "pro-crud4.diego-luque.com",
@@ -213,7 +216,8 @@ class Datos(BaseModel):
                     "categories": ["mongodb", "python", "fastapi"],
                     "description": "orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500",
                     "level":"normal",
-                    "type_back_front":"backend"}
+                    "type_back_front":"backend",
+                    "repository": "www.github.com"}
                 ]
             }
         }
