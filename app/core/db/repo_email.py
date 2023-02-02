@@ -6,3 +6,6 @@ def create_email(model:dict) -> dict:
     retrive = db_email.find_one({"_id": dato.inserted_id})
     return retrive
     
+def retrive_email() -> list:
+    datos = db_email.find({},{"_id":0})
+    return list(datos)

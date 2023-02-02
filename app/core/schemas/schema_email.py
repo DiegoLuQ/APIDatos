@@ -31,7 +31,13 @@ class Mensaje_Email(BaseModel):
         schema_extra = {
             "example": {
                 "nombre":"Diego",
-                "email":"sincero_.dig@gmail.com",
+                "email":"sincero_@gmail.com",
                 "mensaje":"Hola"
             }
         }
+
+class Get_Mensaje(BaseModel):
+    nombre: str = Field(description="Nombre del emisor", min_length=3 )
+    email: str = Field(description="Email del emisor", min_length=5)
+    mensaje: str = Field(description="Mensaje del emisor", min_length=1)
+    fecha=date.today()

@@ -16,6 +16,7 @@ class Settings:
     ACCESS_TOKEN_EXPIRE_MINUTES = 30
     REFRESH_TOKEN_EXPIRE_MINUTES = 30
 
+
     # FASTAPI
     TITLE = "Portafolio Backend Developer"
     VERSION = "1.0.0.0"
