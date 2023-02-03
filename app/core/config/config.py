@@ -15,7 +15,7 @@ class Settings:
     ALGORITHM = environ.get('ALGORITHM')
     ACCESS_TOKEN_EXPIRE_MINUTES = 30
     REFRESH_TOKEN_EXPIRE_MINUTES = 30
-
+    RUTA_CLUSTER = environ.get('RUTA_CLUSTER')
 
     # FASTAPI
     TITLE = "Portafolio Backend Developer"

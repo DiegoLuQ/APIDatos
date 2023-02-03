@@ -9,7 +9,7 @@ services:
     volumes:
       - ./app:/api/
     environment:
-      - RUTA_MONGO=mongodb://db_mongo:27017/
+      - RUTA_CLUSTER=${RUTA_CLUSTER}
 
   nginx:
     image: nginx:latest
@@ -21,11 +21,4 @@ services:
       - LETSENCRYPT_HOST=api.diego-luque.com
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
-
-# algun network ya creado / any network create already
-networks:
-  default:
-    name: web_private_red_webapps
-    # name: database_catalogo-network
-    external: true
 
